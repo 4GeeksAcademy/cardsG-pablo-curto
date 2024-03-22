@@ -1,0 +1,51 @@
+body {
+  background: green;
+}
+
+.card {
+  margin-top: 40px !important;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+  background: white;
+  padding: 20px;
+  padding-top: 150px;
+  border: 1px solid black;
+  position: relative;
+  text-align: center;
+  font-size: 80px;
+  &:before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(180deg);
+  }
+  .numero {
+    font-size: 100px;
+    margin-bottom: 20%;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+}
